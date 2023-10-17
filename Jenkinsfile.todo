@@ -1,7 +1,7 @@
 node {
   stage('SCM') {
     checkout scm
-  }
+  } 
   stage('Dependency check') {
     dependencyCheck additionalArguments: '', odcInstallation: 'dp-check'
     dependencyCheckPublisher pattern: '**/dependency-check-report.xml'
